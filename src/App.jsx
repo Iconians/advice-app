@@ -6,6 +6,7 @@ const advice = new ProductService();
 function App() {
   const [adviceArr, setAdviceArr] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [newAdvice, setNewAdvice] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -16,18 +17,35 @@ function App() {
       }
     });
     setLoading(false);
-  }, []);
+    setNewAdvice(false);
+  }, [newAdvice]);
   return (
     <div className="App">
       <div className="main-wrapper">
         {!loading ? (
-          <div>
+          <div className="card">
             {adviceArr.map((item) => (
-              <div className="card">
-                <h5>{item.id}</h5>
+              <div className="card-advice">
+                <h5>{`ADVICE # ${item.id}`}</h5>
                 <h3>{item.advice}</h3>
               </div>
             ))}
+            <picture>
+              <source
+                srcSet="/pattern-divider-mobile.svg"
+                media="(max-width: 605px)"
+              />
+              <source srcSet="/pattern-divider-desktop.svg" />
+              <img
+                className="divider"
+                src="/pattern-divider-desktop.svg"
+                alt="pattern-divider"
+              />
+            </picture>
+
+            <button onClick={() => setNewAdvice(true)} className="btn-div">
+              <img src="/icon-dice.svg" alt="" />
+            </button>
           </div>
         ) : (
           <div className="loading">Loading...</div>
@@ -38,7 +56,7 @@ function App() {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Your Name Here</a>.
+        . Coded by <a href="https://handywebsites.info/">Clayton Cripe</a>.
       </div>
     </div>
   );

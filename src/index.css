@@ -1,0 +1,25 @@
+body {
+  background-color: #131212;
+}
+
+.main-wrapper {
+  height: 638px;
+}
+
+.card {
+  width: 600px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (prefers-color-scheme: light) {
+
+}

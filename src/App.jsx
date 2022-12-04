@@ -26,25 +26,18 @@ function App() {
           <div className="card">
             {adviceArr.map((item) => (
               <div className="card-advice">
-                <h5>{`ADVICE # ${item.id}`}</h5>
+                <h5>{`ADVICE #${item.id}`}</h5>
                 <h3>{item.advice}</h3>
               </div>
             ))}
-            <picture>
-              <source
-                srcSet="/pattern-divider-mobile.svg"
-                media="(max-width: 605px)"
-              />
-              <source srcSet="/pattern-divider-desktop.svg" />
-              <img
-                className="divider"
-                src="/pattern-divider-desktop.svg"
-                alt="pattern-divider"
-              />
-            </picture>
+            <img
+              src="/src/assets/pattern-divider-desktop.svg"
+              className="divider"
+              alt="pattern-divider"
+            />
 
             <button onClick={() => setNewAdvice(true)} className="btn-div">
-              <img src="/icon-dice.svg" alt="" />
+              <img src="/src/assets/icon-dice.svg" alt="" />
             </button>
           </div>
         ) : (

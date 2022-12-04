@@ -7,7 +7,6 @@ class ProductService {
       if(response.ok) {
         const json = await response.json()
         const advice = json.slip
-        console.log(json.slip);
       success( {response, advice} )
       }
       else {

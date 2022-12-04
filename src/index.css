@@ -22,7 +22,7 @@ body {
   position: absolute;
   left: 18px;
   right: 0.61%;
-  top: calc(50% - 18px/2 -125px);
+  top: calc(50% - 18px/2 - 125px);
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;

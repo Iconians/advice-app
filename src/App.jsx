@@ -31,13 +31,13 @@ function App() {
               </div>
             ))}
             <img
-              src="Advice-Generator\src\assets\pattern-divider-desktop.svg"
+              src="/Advice-Generator/src/assets/pattern-divider-desktop.svg"
               className="divider"
               alt="pattern-divider"
             />
 
             <button onClick={() => setNewAdvice(true)} className="btn-div">
-              <img src="Advice-Generator\src\assets\icon-dice.svg" alt="" />
+              <img src="/Advice-Generator/src/assets/icon-dice.svg" alt="" />
             </button>
           </div>
         ) : (

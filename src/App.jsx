@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ProductService from "./services";
+import pattern from "/src/assets/pattern-divider-desktop.svg";
+import dice from "/src/assets/icon-dice.svg";
 
 const advice = new ProductService();
 function App() {
@@ -29,14 +31,10 @@ function App() {
                 <h3>{item.advice}</h3>
               </div>
             ))}
-            <img
-              src="/pattern-divider-desktop.svg"
-              className="divider"
-              alt="pattern-divider"
-            />
+            <img src={pattern} className="divider" alt="pattern-divider" />
 
             <button onClick={() => setNewAdvice(true)} className="btn-div">
-              <img src="/icon-dice.svg" alt="" />
+              <img src={dice} alt="" />
             </button>
           </div>
         ) : (
